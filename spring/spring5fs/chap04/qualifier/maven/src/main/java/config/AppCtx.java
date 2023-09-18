@@ -35,8 +35,9 @@ public class AppCtx {
     }
 
     @Bean
+    @Qualifier("summaryPrinter")
     public MemberPrinter memberPrinter2() {
-        return new MemberPrinter();
+        return new MemberSummaryPrinter();
     }
 
     @Bean
